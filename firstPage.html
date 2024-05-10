@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <TITLE>Početna stranica</TITLE>
+      <link rel="stylesheet" type="text/css" href="firstPage.css">
+      <script type="text/javascript" src="ucitavanje.js"></script>
+      <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+<body>
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="colForLabel">
+        <label for="fname">Website: </label>
+      </div>
+      <div class="colForInput">
+        <input type="url" id="fname" name="name"  placeholder="www.klix.ba">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="colForLabel">
+        <label for="browser">Web browser:</label>
+      </div>
+      <div class="colForInput">
+        <select name="name" id="browser">
+          <option value="chrome">Google Chrome</option>
+          <option value="firefox">Mozilla Firefox</option>
+          <option value="MicrosoftEdge">Microsoft Edge</option>
+        </select>
+    </div>
+    </div>
+  </form>
+  <button class="button" type="button" onclick="ucitaj()">Load</button>
+  <script>
+    function ucitaj() {
+     var url = document.getElementById('fname').value;
+     var browser = document.getElementById('browser').value;
+     loading(url,browser);
+    }
+  </script>
+</div>
+</body>
+</html>
